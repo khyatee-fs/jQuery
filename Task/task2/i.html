@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+    <h1 style="color: green;">GeeksForGeeks</h1> 
+      
+    <p>Programming Languages:</p> 
+  
+    <select id='programmingLanguage'> 
+        <option value="Java" style="color: green; font-weight: 700;">Java</option> 
+        <option value="Python" style="color: green; font-weight: 700;">Python</option> 
+        <option value="CPP" style="color: green; font-weight: 700;">CPP</option> 
+        <option value="C" style="color: blue; font-weight: 700;">C</option> 
+    </select> 
+      
+    <p>Click to add C# and PHP programming languages</p> 
+  
+    <button onclick="addOption()">Add option</button> 
+
+    <!-- Include jQuery -->
+    <script src="../../jq/jquery-3.7.1.min.js"></script>
+
+    <!-- Code to add an option to an existing set of options using jQuery -->
+    <script> 
+        function addOption() { 
+            var options = { 
+                val1: 'C#', 
+                val2: 'PHP' 
+            }; 
+            var selectOption = $('#programmingLanguage'); 
+            $.each(options, function (val, text) { 
+                selectOption.append( 
+                    $('<option></option>').val(val).html(text) 
+                ); 
+            }); 
+        } 
+    </script> 
+</body> 
+</html>

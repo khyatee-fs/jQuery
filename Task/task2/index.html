@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .section {
+            display: flex;
+            justify-content: space-between;
+        }
+        .container {
+            background-color: blueviolet;
+            color: aliceblue;
+            width: 200px;
+            height: 80vh;
+            text-align: center;
+            font-size: large;
+        }
+        .navbar ul {
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+            background-color: plum;
+            color: black;
+        }
+        .navbar ul li {
+            padding: 30px;
+            width: 200px;
+        }
+        .box1, .box2, .box3, .box4 {
+            margin: 10px;
+            height: 100px;
+            border: 2px solid blue;
+        }
+        .btn{
+            align-self: center;
+        }
+        .add-class {
+            color: aquamarine;
+            background-color: rgb(79, 81, 78);
+        }
+    </style>
+</head>
+<body   >
+    <div class="section">
+    <div class="container">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore suscipit ipsam deleniti? Molestiae perferendis asperiores impedit ipsum, sunt nisi a dolores mollitia autem perspiciatis, nam tenetur dolore voluptatem inventore possimus.</p>
+    </div>
+    <div class="navbar">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+            <li>Blog</li>
+        </ul>
+        <select name="color" id="" class="color" aria-checked="mixed">
+            <option value="select" >select</option>
+            <option value="green" class="green">green</option>
+            <option value="blue" id="blue">blue</option>
+        </select>
+
+        <div class="box1">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus dignissimos fugit suscipit ducimus hic, consequatur unde illum voluptate eius omnis, nemo laborum repellendus aperiam deserunt nulla esse et ex tempore!</p>
+        </div>
+        <div class="box2">
+            <p class="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus dignissimos fugit suscipit ducimus hic, consequatur unde illum voluptate eius omnis, nemo laborum repellendus aperiam deserunt nulla esse et ex tempore!</p>
+        </div>
+        <div class="box3">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus dignissimos fugit suscipit ducimus hic, consequatur unde illum voluptate eius omnis, nemo laborum repellendus aperiam deserunt nulla esse et ex tempore!</p>
+        </div>
+        <div class="box4">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus dignissimos fugit suscipit ducimus hic, consequatur unde illum voluptate eius omnis, nemo laborum repellendus aperiam deserunt nulla esse et ex tempore!</p>
+        </div>
+    </div>
+    <div class="container">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam, incidunt voluptas odio temporibus aperiam accusantium ex eveniet dicta quis ullam magnam repudiandae obcaecati cum, ducimus fugit et expedita earum similique?</div>
+    </div>
+
+    <script src="../../jq/jquery-3.7.1.min.js"></script>
+    
+    <script>
+        $(document).ready(function(){
+            $("#blue").click(function(){
+                $("body").toggleClass("add-class");
+            });
+        });
+    </script>
+</body>
+</html>
